@@ -8,10 +8,10 @@ describe('Array Number Input Test', () => {
 
   const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8];
   const ids = {
-    leftBox0: '[id="left_0"]',
-    rightBox0: '[id="right_0"]',
-    weigh: '[id="weigh"]',
-    reset: '[id="reset"]'
+  leftBox0: '[id="left_0"]',
+  rightBox0: '[id="right_0"]',
+  weigh: '[id="weigh"]',
+  reset: '[id="reset"]'
   };
 
   it('should enter numbers, check button symbol, and find the fake weight', () => {
