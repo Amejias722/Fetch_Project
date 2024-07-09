@@ -307,6 +307,11 @@ cypress-if@^1.12.3:
   dependencies:
     debug "^4.3.4"
 
+cypress-plugin-steps@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/cypress-plugin-steps/-/cypress-plugin-steps-1.1.1.tgz#862938f7383a72cb2ab75bc1448df7371eb0888c"
+  integrity sha512-0TYBp8sIJovW9mfsN0uJXVMqW9XV9rqbX5fFwmbBmz0D2vMZShMD9BkBfjNC3Y812hZoTWw4dLE4UmV6fidycA==
+
 cypress-recurse@^1.35.3:
   version "1.35.3"
   resolved "https://registry.yarnpkg.com/cypress-recurse/-/cypress-recurse-1.35.3.tgz#60982d9d0ef3e8ae7c34a38e93aeec68f7ca01e8"
@@ -882,6 +887,11 @@ pify@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
+
+prettier@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.2.tgz#03ff86dc7c835f2d2559ee76876a3914cec4a90a"
+  integrity sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==
 
 pretty-bytes@^5.6.0:
   version "5.6.0"

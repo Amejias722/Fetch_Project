@@ -1,4 +1,5 @@
 
+import 'cypress-plugin-steps'
 
 describe('Array Number Input Test', () => {
   beforeEach(() => {
@@ -14,8 +15,10 @@ describe('Array Number Input Test', () => {
   };
 
   it('should enter numbers, check button symbol, and find the fake weight', () => {
+    cy.step('add 0 to first box')
     cy.get(ids.leftBox0).clear().type('0');
 
+    cy.step('Iterate through each number in array')
     cy.wrap(numbersArray).each((number) => {
       cy.get(ids.rightBox0)
         .clear()
@@ -29,70 +32,24 @@ describe('Array Number Input Test', () => {
         .then((text) => {
           if (text !== '=') {
             const lastNumberEntered = `${number}`;
-            cy.log(`You found it! It's either 0 or ${lastNumberEntered}`);
+            cy.log(`You found it! It's either 0 or ${lastNumberEntered}`)
             cy.get('[id="coin_0"]').click()
             cy.on('window:alert', (alertText) => {
-              if (alertText === 'Yay! You find it!') {
+              if (alertText === 'Yay! You find it!'){
                 expect(alertText).to.equal('Yay! You find it!');
-                //return false;
+                
               } else {
                 cy.get(`button[id="coin_${lastNumberEntered}"]`).click();
-                cy.on('window:alert', (alertText) => {
-                  expect(alertText).to.equal('Yay! You find it!');
-                  // No need for cy.then() here, just return false to stop iterations
-                  return false;
-                  
-                });
-                
+              
               }
             });
-            
+        
           }
         });
         
     });
-    
+    cy.step('verify there is an ordered list')
+  
+    cy.get('ol').find('li').should('have.length', 8).should('be.visible');
   });
 });
-
-
-
-
-    // //cy.wrap(buttonIds).each((buttonId) => {
-    //   cy.get(`${lastNumberEntered}`).click();
-    //   cy.on('window:alert', (alertText) => {
-    //     if (alertText === 'Yay! You find it!') {
-    //       expect(alertText).to.equal('Yay! You find it!');
-    //     }
-    
-  
-  //});
-//});
-
-//   it.only('Finds out which weight is fake', () => {
-//     let shouldStop = false
-//     const popUp = 'Yay! You find it!';
-//     const buttonIds = ['coin_0', 'coin_1', 'coin_2', 'coin_3', 'coin_4', 'coin_5', 'coin_6', 'coin_7', 'coin_8'];
-  
-//     cy.wrap(buttonIds).each((buttonId) => {
-//       // Click the button with the current buttonId
-//       cy.get(`#${buttonId}`).click().then(() =>{
-
-
-//       })
-
-//   });
-// })
-
-
-// describe('template spec', () => {
-//   it('passes', () => {
-//     cy.visit('http://sdetchallenge.fetch.com/');
-
-//     cy.get(ids.leftBox0).clear().type('0')
-//     cy.get(ids.rightBox0).clear().type('1')
-//     cy.get(ids.weigh).click().wait(3000)
-
- 
-// });
-// })
