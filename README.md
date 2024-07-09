@@ -17,7 +17,7 @@ Populate and weigh gold bars until the fake one is found
 Click on the fake bar number
 Output the alert message, number of weighings, and list of weighings made
 
-Prerequisites
+Prerequisites:
 Node.js and npm installed
 Cypress installed (npm install cypress)
 Cypress plugin steps installed (npm install cypress-plugin-steps)
@@ -28,24 +28,19 @@ Clone the repository:
 
 bash
 Copy code
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/Amejias722/Fetch_Project.git
+
 Install dependencies:
 
-bash
-Copy code
 npm install
-Open Cypress:
+or yarn install 
 
-bash
-Copy code
-npx cypress open
+
 Running the Test
 Open Cypress Test Runner with:
-bash
-Copy code
-npx cypress open
-Run the test by selecting the test file.
+
+npx cypress open or yarn cypress open
+Run the test by selecting the test file, in this case it's titled "fetch.cy.ts"
 
 
 Test Description
@@ -60,7 +55,7 @@ The test script performs the following steps:
     d. Waits for the result.
 4. Checks the result text.
     a. If the result is not equal (=), it logs the last entered number.
-    b. Clicks the coin corresponding to the number found.
+    b. Clicks the weight corresponding to the number found.
     c. Checks the alert message to confirm if the fake bar is found.
 5. Verifies that an ordered list of weighings is displayed on the page.
 
