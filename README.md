@@ -1,4 +1,3 @@
-# Fetch Rewards 💰💳🤑
 ## _Fake Weight Project_
 
 [![N|Solid](https://www.shareicon.net/data/128x128/2015/12/28/694395_scale_512x512.png)]()
@@ -19,7 +18,7 @@ This project automates the process of finding the fake gold bar in the SDET Chal
 - Implement the algorithm from step 1 using the actions from step 2 to find the fake gold bar.
 
 ## The Algorithm Should 🧠
-- Populate and weigh gold bars until the fake one is found
+- Populate and weigh gold bars 
 - Click on the fake bar number
 - Output the alert message, number of weighings, and list of weighings made
 
